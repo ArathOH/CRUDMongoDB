@@ -1,0 +1,34 @@
+<table class="table-fill">
+<thead>
+        <tr>
+            <th class="text-left">ID</th> 
+            <th cclass="text-left">Nombre</th>
+            <th class="text-left">Precio</th>
+            <th class="text-left">Descripcion</th>
+            <th class="text-left">Categoria</th>
+            <th cclass="text-left" style="text-align: center;">Imagen</th>
+            <th class="text-left">Opciones</th>
+        </tr>
+</thead>
+ <tbody class="table-hover">
+    {{#products}} <!--Este es la manera de hacer el foreach para el HTML -->
+        <tr class="tabaShow">
+         <br>
+            <td  class="text-left">{{_id}}</td>
+            <td  class="text-left">{{name}}</td>
+            <td  class="text-left">{{price}}</td>
+            <td  class="text-left">{{description}}</td>
+            <td  class="text-left">{{category}}</td>
+            <td  class="text-left">{{picture}}</td>
+            <td  class="text-left">
+                    {{!-- Ruta para deitar los datos para agarrar los datos --}}
+            <form action="/api/product/{{_id}}" method="get">
+            <button type="submit" class="btn btn-secondary">Editar</button>
+            </form>
+            </td>
+        </tr>
+        {{/products}} <!--foreach fin -->
+    </tbody>
+</table>
+    <br>
+    <br>

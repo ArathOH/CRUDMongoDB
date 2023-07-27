@@ -1,0 +1,21 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("/static/img/fondo_Home.jpg") no-repeat;
+    background-size: cover; 
+}
+  
+.inner {
+    background: #36363660;
+    border: 10px solid #dbdbdb59; }
+     
+    .letraH
+    {
+      font-size: xx-large;
+    }
+
+    .btn-primary{
+      margin-left: 33%;
+      height: 50px;
+    }

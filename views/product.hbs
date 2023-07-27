@@ -1,0 +1,43 @@
+
+        <div class="wrapper">
+			<div class="inner">
+				<form action="/api/product" method="POST">
+					<h3>Insertar Productos</h3>
+					<p>Inserta los Productos de la Tienda y envialos</p>
+					<label class="form-group">
+						<input type="text" class="form-control" name="name" id="name" required>
+						<span>Nombre del Producto</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" class="form-control" name="price" id="price"  required>
+						<span for="">Precio del Producto</span>
+						<span class="border"></span>
+					</label>
+                        <label class="form-group" for="category">
+                        <select class="form-control" id="category" name="category">  
+                            <option >tarjeta de video</option>
+                            <option>tarjeta madre</option>
+                            <option>procesador</option>
+							<option >ssd</option>
+                            <option>memoria ram</option>
+                            <option>fuenta de poder</option>
+							<option >discos duros</option>
+                            <option>teclado</option>
+							<option>mouse</option>
+                            <option>monitor</option>
+                        </select>
+						</label>
+					<label class="form-group" >
+						<textarea name="description" id="description" class="form-control" required></textarea>
+						<span for="">Descripcion</span>
+						<span class="border"></span>
+					</label>
+                    <label class="form-group" for="picture">
+                    <input type="text" class="form-control" value="" placeholder="Inserta Nombre y formato de la imagen" name="picture" id="picture"> 
+					</label>
+					<button class="btn btn-primary">Enviar
+					</button>
+				</form>
+			</div>
+		</div>

@@ -1,0 +1,24 @@
+footer {
+    background-color: #39459b;
+    text-align: center;
+      font-size: xx-large;
+      color: #39459b;
+      
+  }
+
+  .container {
+    width: 90%;
+    margin-left: 10vw;
+    background: #39459b;
+    transition: 1s;
+    transform-origin: left center;
+    color: #D2D2D0;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  .me-3{
+    text-align: center;
+  }

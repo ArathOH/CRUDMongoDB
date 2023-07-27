@@ -1,0 +1,54 @@
+        <div class="wrapper">
+			<div class="inner">
+                {{!-- //cuando entre a esta pagina de editar yo voy a tener la posibilidad de tener dicho id --}}
+				<form action="/api/product/{{products._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+					<h3>Modificar Productos</h3>
+					<p>Inserta los Productos de la Tienda y envialos</p>
+                    <label class="form-group">
+						<input type="text" class="form-control" disabled name="_Id" id="_id" value="{{products._id}}" style="color: black;">
+						<span>ID</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="name" value="{{products.name}}" id="name" required>
+						<span>Name</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" class="form-control"  value="{{products.price}}" name="price" id="price"  required>
+						<span for="">Price</span>
+						<span class="border"></span>
+					</label>
+                        <label class="form-group" for="category">
+                        <select class="form-control" id="category"  name="category">  
+                            <option selected>{{products.category}}</option>
+                            <option >tarjeta de video</option>
+                            <option>tarjeta madre</option>
+                            <option>procesador</option>
+							<option >ssd</option>
+                            <option>memoria ram</option>
+                            <option>fuenta de poder</option>
+							<option >discos duros</option>
+                            <option>teclado</option>
+							<option>mouse</option>
+                            <option>monitor</option>
+                        </select>
+						</label>
+					<label class="form-group" >
+						<input type="text" class="form-control" value="{{products.description}}" name="description" id="description" required></input>
+						<span for="">Your Message</span>
+						<span class="border"></span>
+					</label>
+                    <label class="form-group" for="picture">
+                    <input type="text" class="form-control" value="{{products.picture}}" placeholder="Inserta Nombre y formato de la imagen" name="picture" id="picture"> 
+					</label>
+					<tabler class="tableEd">
+					        <tr>
+            <th ><button type="submit" class="btn btn btn-secondary btn-lg" method="Post" formaction="/api/product/{{products._id}}?_method=PUT">Modificar </button> </th> 
+            <th > <button type="submit" class="btn btn btn-secondary btn-lg" method="Post" formaction="/api/product/{{products._id}}?_method=delete">Eliminar</button> </th>
+							</tr>	
+                   </tabler>
+				</form>
+			</div>
+		</div>
